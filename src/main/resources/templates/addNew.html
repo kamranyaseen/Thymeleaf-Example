@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="../static/bootstrap.min.css"
+          th:href="@{/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+</head>
+<body>
+	<h1>Add New Student</h1>
+	<form th:object="${student}" th:action="@{/save}" action="#" method="post">
+		<input type="text" th:field="*{firstName}" class="form-control" placeholder="Enter your firstName"/>
+		<div style="clear: both; display: block; height: 10px;"></div> 
+		<input type="text" th:field="*{lastName}" class="form-control" placeholder="Enter your lastname"/>
+		<div style="clear: both; display: block; height: 10px;"></div> 
+		<input type="text" th:field="*{email}" class="form-control" placeholder="Enter your email"/>
+		<div style="clear: both; display: block; height: 10px;"></div> 
+		<input type="submit" class="btn btn-success" value="Save"/>
+	</form>
+</body>
+</html>
